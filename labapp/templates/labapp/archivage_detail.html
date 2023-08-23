@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Echantillon archivé</h1>
+
+  <p><strong>Id:</strong> <a>{{ Archivage.Id }}</a></p> <!-- Archivage detail link not yet defined -->
+  <p><strong>Etude:</strong> {{ Archivage.Etude }}</p>
+  <p><strong>Boite:</strong> {{ Archivage.boite }}</p>
+  <p><strong>Position:</strong> {{ Archivage.POsition }}</p>
+  <p><strong>Archivé le:</strong> {{ Date_et_heure_archivage_noHour }}</p>
+  <p><strong>Archivé par:</strong> {{ Archivage.Autheur }}</p>
+
+  
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Liste des examens</h1>
+
+    {% if examen_list %}
+    <ul>
+
+      {% for examens in examen_list %}
+      <li>
+        <a href="{{ examen.get_absolute_url }}"> Id du projet: {{ examens.id_projet }}</a> Age : {{ examens.age }} Sexe : {{ examens.sexe }}, Section: {{ examens.section }} {{ examens.examen }}
+      </li>
+
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>Il n'y a pas  dexamens dans la base de donées.</p>
+    {% endif %}
+{% endblock %}

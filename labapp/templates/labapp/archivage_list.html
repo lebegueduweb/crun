@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Liste des archivages</h1>
+
+    {% if archivage_list %}
+    <ul>
+      {% for archivage in archivage_list %}
+      <li>
+        <a href="{{ archivage.get_absolute_url }}"> {{ archivage.id_examen }}</a> ID dans le projet {{ archivage.id_projet }} Boite: {{ archivage.Boite }}  Position:{{ archivage.Position }}
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>Aucun échantillon archivé n'a été trouvé</p>
+    {% endif %}
+{% endblock %}

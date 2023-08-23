@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Bienvenue sur la plateforme d archivage et de demande d examens </h1>
+
+
+<h2>Dynamic content</h2>
+
+  <p>La base de données compte les éléments suivants:</p>
+  <ul>
+    <li><strong>Examen demandées</strong> {{ num_examens }}</li>
+    <li><strong>Echantillons archivés:</strong> {{ num_archivages }}</li>
+  
+  </ul>
+<p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} times{% else %} times{% endif %}.</p>
+
+{% endblock %}

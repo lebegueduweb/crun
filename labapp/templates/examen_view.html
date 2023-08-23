@@ -1,0 +1,33 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+  
+<h2>Contenu dynamique</h2>
+
+<div class="main-content">
+  <main role="main">
+
+
+  <ul>
+    <li><strong>Examens:</strong> {{ num_examens }}</li>
+    <li><strong>Echantillons archivés:</strong> {{ num_archivages }}</li>
+
+  </ul>
+<div class="row" style="display:inline-block">
+  <span>
+  </span>
+
+  <span>
+  <form action="{% url 'archivage_create' %}" method="post">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    </table>
+  </form>
+  </span>
+</div>
+</main>
+</div>
+
+{% endblock %}
